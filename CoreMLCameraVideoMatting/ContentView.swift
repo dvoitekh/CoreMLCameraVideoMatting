@@ -15,9 +15,10 @@ struct ContentView: View {
             CustomCameraRepresentable(sharedImage: sharedImage)
             
             Group {
-//                TODO: we'll add pha (background mask) later
-                if let fgr = sharedImage.fgr  {
-                    Image(uiImage: fgr).normalize()
+                if let fgr = sharedImage.fgr, let pha = sharedImage.pha {
+                    Image(uiImage: fgr).normalize().mask(
+                        Image(uiImage: pha).normalize()
+                    )
                 }
             }.overlay(
                 Button("Shuffle Color") {
@@ -45,12 +46,12 @@ struct CustomCameraRepresentable: UIViewControllerRepresentable {
 class CustomCameraController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
     let targetFps = Int32(10)
     let videoOutput = AVCaptureVideoDataOutput()
-    var sharedImage = BMSharedImage()
     var captureSession = AVCaptureSession()
+    var sharedImage: BMSharedImage?
+    var predictor: RVMPredictor?
     
     init(sharedImage: BMSharedImage) {
-//        TODO: We'll add Background Matting model later
-        self.sharedImage = sharedImage
+        self.predictor = RVMPredictor(sharedImage: sharedImage)
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -68,24 +69,11 @@ class CustomCameraController: UIViewController, AVCaptureVideoDataOutputSampleBu
         return AVCaptureDevice.default(AVCaptureDevice.DeviceType.builtInWideAngleCamera, for: .video, position: .front)!
     }
     
-//    Set fps for the current device
-    func setFps(device: AVCaptureDevice) {
-        do {
-            try device.lockForConfiguration()
-        } catch _ {
-            print("failed locking device")
-        }
-        device.activeVideoMinFrameDuration = CMTimeMake(value: 1, timescale: targetFps)
-        device.activeVideoMaxFrameDuration = CMTimeMake(value: 1, timescale: targetFps)
-        device.unlockForConfiguration()
-    }
-    
     func setup() {
         let device = getDevice()
 //        Set camera input stream
         let cameraInput = try! AVCaptureDeviceInput(device: device)
         self.captureSession.addInput(cameraInput)
-        self.setFps(device: device)
 
 //        Set camera output stream. stream is processed by captureOutput function defined below
         self.videoOutput.videoSettings = [(kCVPixelBufferPixelFormatTypeKey as NSString) : NSNumber(value: kCVPixelFormatType_32BGRA)] as [String : Any]
@@ -104,10 +92,7 @@ class CustomCameraController: UIViewController, AVCaptureVideoDataOutputSampleBu
                        didOutput sampleBuffer: CMSampleBuffer,
                        from connection: AVCaptureConnection) {
         if let pixelBuffer = getPixelBufferFromSampleBuffer(buffer: sampleBuffer) {
-//            TODO: We'll change this logic to a model inference later
-            DispatchQueue.main.sync {
-                self.sharedImage.fgr = UIImage(cgImage: pixelBuffer.toCGImage())
-            }
+            predictor?.predict(src: pixelBuffer)
         }
     }
 }

@@ -12,6 +12,8 @@
 		30993A4127E87274006CE502 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30993A4027E87274006CE502 /* Assets.xcassets */; };
 		30993A4427E87274006CE502 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30993A4327E87274006CE502 /* Preview Assets.xcassets */; };
 		30993A4B27E87BFA006CE502 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30993A4A27E87BFA006CE502 /* Helpers.swift */; };
+		30993A4E27E9161B006CE502 /* RVM.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 30993A4D27E9161B006CE502 /* RVM.mlmodel */; };
+		30993A5027E917C8006CE502 /* RVMPredictor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30993A4F27E917C8006CE502 /* RVMPredictor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		30993A4027E87274006CE502 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		30993A4327E87274006CE502 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		30993A4A27E87BFA006CE502 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		30993A4D27E9161B006CE502 /* RVM.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = RVM.mlmodel; sourceTree = "<group>"; };
+		30993A4F27E917C8006CE502 /* RVMPredictor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RVMPredictor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,9 +57,11 @@
 		30993A3B27E87272006CE502 /* CoreMLCameraVideoMatting */ = {
 			isa = PBXGroup;
 			children = (
+				30993A4C27E9149A006CE502 /* Models */,
 				30993A3C27E87272006CE502 /* CoreMLCameraVideoMattingApp.swift */,
 				30993A4A27E87BFA006CE502 /* Helpers.swift */,
 				30993A3E27E87272006CE502 /* ContentView.swift */,
+				30993A4F27E917C8006CE502 /* RVMPredictor.swift */,
 				30993A4027E87274006CE502 /* Assets.xcassets */,
 				30993A4227E87274006CE502 /* Preview Content */,
 			);
@@ -68,6 +74,14 @@
 				30993A4327E87274006CE502 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		30993A4C27E9149A006CE502 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				30993A4D27E9161B006CE502 /* RVM.mlmodel */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,8 +154,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30993A4E27E9161B006CE502 /* RVM.mlmodel in Sources */,
 				30993A3F27E87272006CE502 /* ContentView.swift in Sources */,
 				30993A4B27E87BFA006CE502 /* Helpers.swift in Sources */,
+				30993A5027E917C8006CE502 /* RVMPredictor.swift in Sources */,
 				30993A3D27E87272006CE502 /* CoreMLCameraVideoMattingApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
