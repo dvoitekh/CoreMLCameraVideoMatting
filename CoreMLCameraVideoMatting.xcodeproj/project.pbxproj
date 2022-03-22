@@ -17,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3032777927E9D9EE0015D575 /* CoreMLCameraVideoMatting.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CoreMLCameraVideoMatting.entitlements; sourceTree = "<group>"; };
 		30993A3927E87272006CE502 /* CoreMLCameraVideoMatting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreMLCameraVideoMatting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30993A3C27E87272006CE502 /* CoreMLCameraVideoMattingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreMLCameraVideoMattingApp.swift; sourceTree = "<group>"; };
 		30993A3E27E87272006CE502 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -57,6 +58,7 @@
 		30993A3B27E87272006CE502 /* CoreMLCameraVideoMatting */ = {
 			isa = PBXGroup;
 			children = (
+				3032777927E9D9EE0015D575 /* CoreMLCameraVideoMatting.entitlements */,
 				30993A4C27E9149A006CE502 /* Models */,
 				30993A3C27E87272006CE502 /* CoreMLCameraVideoMattingApp.swift */,
 				30993A4A27E87BFA006CE502 /* Helpers.swift */,
@@ -286,6 +288,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CoreMLCameraVideoMatting/CoreMLCameraVideoMatting.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CoreMLCameraVideoMatting/Preview Content\"";
@@ -305,9 +308,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.dvoitekh.dvoitekh.CoreMLCameraVideoMatting;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,6";
 			};
 			name = Debug;
 		};
@@ -316,6 +321,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CoreMLCameraVideoMatting/CoreMLCameraVideoMatting.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CoreMLCameraVideoMatting/Preview Content\"";
@@ -335,9 +341,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.dvoitekh.dvoitekh.CoreMLCameraVideoMatting;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,6";
 			};
 			name = Release;
 		};
