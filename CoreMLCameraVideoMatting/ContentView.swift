@@ -3,7 +3,6 @@ import AVFoundation
 import Vision
  
 struct ContentView: View {
-    let colors = [Color.white, Color.green, Color.red, Color.blue, Color.orange, Color.brown, Color.gray, Color.cyan, Color.indigo]
 //    Background color of the UI page
     @State var color = Color.white
 //    Current image. change in @StateObject property will rerender view
@@ -14,21 +13,21 @@ struct ContentView: View {
 //            In order to update the image we need propagate it to UI controller that encapsulates camera logic
             CustomCameraRepresentable(sharedImage: sharedImage)
             
-            Group {
-                if let fgr = sharedImage.fgr, let pha = sharedImage.pha {
-                    Image(uiImage: fgr).normalize().mask(
-                        Image(uiImage: pha).normalize()
-                    )
-                }
-            }.overlay(
-                Button("Shuffle Color") {
-                    color = colors.randomElement()!
-                }.padding()
-                 .font(.system(size: 20, weight: Font.Weight.bold))
-                 .foregroundColor(Color.white)
-                 .background(RoundedRectangle(cornerRadius: 8).fill(Color.blue))
-                 .buttonStyle(PlainButtonStyle()), alignment: .bottom)
-        }.padding(.bottom, 200).background(self.color)
+            Image(uiImage: UIImage(named: sharedImage.emotion)!)
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .edgesIgnoringSafeArea(.top)
+                .overlay(
+                    VStack() {
+                        if let fgr = sharedImage.fgr, let pha = sharedImage.pha {
+                            Image(uiImage: fgr).normalize().mask(
+                                Image(uiImage: pha).normalize()
+                            )
+                        }
+                        Text("\(sharedImage.emotion), \(String(format: "%.4f", sharedImage.emotionProbability))").padding()
+                    }
+                )
+        }.background(self.color)
     }
 }
 
@@ -49,9 +48,12 @@ class CustomCameraController: UIViewController, AVCaptureVideoDataOutputSampleBu
     var captureSession = AVCaptureSession()
     var sharedImage: BMSharedImage?
     var predictor: RVMPredictor?
+    var emotionPredictor: EmotionDetector?
+    var counter = 0
     
     init(sharedImage: BMSharedImage) {
         self.predictor = RVMPredictor(sharedImage: sharedImage)
+        self.emotionPredictor = EmotionDetector(sharedImage: sharedImage)
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -92,7 +94,13 @@ class CustomCameraController: UIViewController, AVCaptureVideoDataOutputSampleBu
                        didOutput sampleBuffer: CMSampleBuffer,
                        from connection: AVCaptureConnection) {
         if let pixelBuffer = getPixelBufferFromSampleBuffer(buffer: sampleBuffer) {
-            predictor?.predict(src: pixelBuffer)
+            if (counter % 2 == 0) {
+                predictor?.predict(src: pixelBuffer)
+            }
+            if (counter % 5 == 0) {
+                emotionPredictor?.predict(src: pixelBuffer)
+            }
+            counter += 1
         }
     }
 }

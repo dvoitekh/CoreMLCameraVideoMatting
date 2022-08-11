@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3060C0B3289BFAAB0004343E /* EmotionDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3060C0B2289BFAAB0004343E /* EmotionDetector.swift */; };
 		30993A3D27E87272006CE502 /* CoreMLCameraVideoMattingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30993A3C27E87272006CE502 /* CoreMLCameraVideoMattingApp.swift */; };
 		30993A3F27E87272006CE502 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30993A3E27E87272006CE502 /* ContentView.swift */; };
 		30993A4127E87274006CE502 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30993A4027E87274006CE502 /* Assets.xcassets */; };
@@ -14,11 +15,30 @@
 		30993A4B27E87BFA006CE502 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30993A4A27E87BFA006CE502 /* Helpers.swift */; };
 		30993A4E27E9161B006CE502 /* RVM.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 30993A4D27E9161B006CE502 /* RVM.mlmodel */; };
 		30993A5027E917C8006CE502 /* RVMPredictor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30993A4F27E917C8006CE502 /* RVMPredictor.swift */; };
+		30F73D32289EDE2C00FB9CBE /* Resnet50Emotions.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 30F73D31289EDE2C00FB9CBE /* Resnet50Emotions.mlmodel */; };
+		30F73D44289EE40600FB9CBE /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F73D33289EE3FF00FB9CBE /* UIImage+Extensions.swift */; };
+		30F73D45289EE40600FB9CBE /* MLMultiArray+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F73D34289EE40000FB9CBE /* MLMultiArray+Image.swift */; };
+		30F73D46289EE40600FB9CBE /* CGImagePropertyOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F73D35289EE40000FB9CBE /* CGImagePropertyOrientation.swift */; };
+		30F73D47289EE40600FB9CBE /* NonMaxSuppression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F73D36289EE40000FB9CBE /* NonMaxSuppression.swift */; };
+		30F73D48289EE40600FB9CBE /* CGImage+RawBytes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F73D37289EE40100FB9CBE /* CGImage+RawBytes.swift */; };
+		30F73D49289EE40600FB9CBE /* MLModel+Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F73D38289EE40100FB9CBE /* MLModel+Images.swift */; };
+		30F73D4A289EE40600FB9CBE /* UIImage+CVPixelBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F73D39289EE40200FB9CBE /* UIImage+CVPixelBuffer.swift */; };
+		30F73D4B289EE40600FB9CBE /* Predictions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F73D3A289EE40200FB9CBE /* Predictions.swift */; };
+		30F73D4C289EE40600FB9CBE /* CGImage+CVPixelBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F73D3B289EE40200FB9CBE /* CGImage+CVPixelBuffer.swift */; };
+		30F73D4D289EE40600FB9CBE /* CVPixelBuffer+Rotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F73D3C289EE40300FB9CBE /* CVPixelBuffer+Rotate.swift */; };
+		30F73D4E289EE40600FB9CBE /* CoreML+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F73D3D289EE40300FB9CBE /* CoreML+Combine.swift */; };
+		30F73D4F289EE40600FB9CBE /* CVPixelBuffer+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F73D3E289EE40400FB9CBE /* CVPixelBuffer+Resize.swift */; };
+		30F73D50289EE40600FB9CBE /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F73D3F289EE40400FB9CBE /* Math.swift */; };
+		30F73D51289EE40600FB9CBE /* MLMultiArray+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F73D40289EE40400FB9CBE /* MLMultiArray+Helpers.swift */; };
+		30F73D52289EE40600FB9CBE /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F73D41289EE40500FB9CBE /* Array+Extensions.swift */; };
+		30F73D53289EE40600FB9CBE /* CVPixelBuffer+Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F73D42289EE40500FB9CBE /* CVPixelBuffer+Create.swift */; };
+		30F73D54289EE40600FB9CBE /* UIImage+RawBytes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F73D43289EE40500FB9CBE /* UIImage+RawBytes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3032777927E9D9EE0015D575 /* CoreMLCameraVideoMatting.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CoreMLCameraVideoMatting.entitlements; sourceTree = "<group>"; };
-		30993A3927E87272006CE502 /* CoreMLCameraVideoMatting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreMLCameraVideoMatting.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3060C0B2289BFAAB0004343E /* EmotionDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionDetector.swift; sourceTree = "<group>"; };
+		30993A3927E87272006CE502 /* CoreMLEmotionalBackgrounds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreMLEmotionalBackgrounds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30993A3C27E87272006CE502 /* CoreMLCameraVideoMattingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreMLCameraVideoMattingApp.swift; sourceTree = "<group>"; };
 		30993A3E27E87272006CE502 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		30993A4027E87274006CE502 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -26,6 +46,24 @@
 		30993A4A27E87BFA006CE502 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		30993A4D27E9161B006CE502 /* RVM.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = RVM.mlmodel; sourceTree = "<group>"; };
 		30993A4F27E917C8006CE502 /* RVMPredictor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RVMPredictor.swift; sourceTree = "<group>"; };
+		30F73D31289EDE2C00FB9CBE /* Resnet50Emotions.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Resnet50Emotions.mlmodel; sourceTree = "<group>"; };
+		30F73D33289EE3FF00FB9CBE /* UIImage+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
+		30F73D34289EE40000FB9CBE /* MLMultiArray+Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MLMultiArray+Image.swift"; sourceTree = "<group>"; };
+		30F73D35289EE40000FB9CBE /* CGImagePropertyOrientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGImagePropertyOrientation.swift; sourceTree = "<group>"; };
+		30F73D36289EE40000FB9CBE /* NonMaxSuppression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NonMaxSuppression.swift; sourceTree = "<group>"; };
+		30F73D37289EE40100FB9CBE /* CGImage+RawBytes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGImage+RawBytes.swift"; sourceTree = "<group>"; };
+		30F73D38289EE40100FB9CBE /* MLModel+Images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MLModel+Images.swift"; sourceTree = "<group>"; };
+		30F73D39289EE40200FB9CBE /* UIImage+CVPixelBuffer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+CVPixelBuffer.swift"; sourceTree = "<group>"; };
+		30F73D3A289EE40200FB9CBE /* Predictions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Predictions.swift; sourceTree = "<group>"; };
+		30F73D3B289EE40200FB9CBE /* CGImage+CVPixelBuffer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGImage+CVPixelBuffer.swift"; sourceTree = "<group>"; };
+		30F73D3C289EE40300FB9CBE /* CVPixelBuffer+Rotate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CVPixelBuffer+Rotate.swift"; sourceTree = "<group>"; };
+		30F73D3D289EE40300FB9CBE /* CoreML+Combine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreML+Combine.swift"; sourceTree = "<group>"; };
+		30F73D3E289EE40400FB9CBE /* CVPixelBuffer+Resize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CVPixelBuffer+Resize.swift"; sourceTree = "<group>"; };
+		30F73D3F289EE40400FB9CBE /* Math.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
+		30F73D40289EE40400FB9CBE /* MLMultiArray+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MLMultiArray+Helpers.swift"; sourceTree = "<group>"; };
+		30F73D41289EE40500FB9CBE /* Array+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
+		30F73D42289EE40500FB9CBE /* CVPixelBuffer+Create.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CVPixelBuffer+Create.swift"; sourceTree = "<group>"; };
+		30F73D43289EE40500FB9CBE /* UIImage+RawBytes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+RawBytes.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +77,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		305DDE3628A4F6D900162093 /* CoreMLHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				30F73D41289EE40500FB9CBE /* Array+Extensions.swift */,
+				30F73D3B289EE40200FB9CBE /* CGImage+CVPixelBuffer.swift */,
+				30F73D37289EE40100FB9CBE /* CGImage+RawBytes.swift */,
+				30F73D35289EE40000FB9CBE /* CGImagePropertyOrientation.swift */,
+				30F73D3D289EE40300FB9CBE /* CoreML+Combine.swift */,
+				30F73D42289EE40500FB9CBE /* CVPixelBuffer+Create.swift */,
+				30F73D3E289EE40400FB9CBE /* CVPixelBuffer+Resize.swift */,
+				30F73D3C289EE40300FB9CBE /* CVPixelBuffer+Rotate.swift */,
+				30F73D3F289EE40400FB9CBE /* Math.swift */,
+				30F73D38289EE40100FB9CBE /* MLModel+Images.swift */,
+				30F73D40289EE40400FB9CBE /* MLMultiArray+Helpers.swift */,
+				30F73D34289EE40000FB9CBE /* MLMultiArray+Image.swift */,
+				30F73D36289EE40000FB9CBE /* NonMaxSuppression.swift */,
+				30F73D3A289EE40200FB9CBE /* Predictions.swift */,
+				30F73D39289EE40200FB9CBE /* UIImage+CVPixelBuffer.swift */,
+				30F73D33289EE3FF00FB9CBE /* UIImage+Extensions.swift */,
+				30F73D43289EE40500FB9CBE /* UIImage+RawBytes.swift */,
+			);
+			path = CoreMLHelpers;
+			sourceTree = "<group>";
+		};
 		30993A3027E87272006CE502 = {
 			isa = PBXGroup;
 			children = (
@@ -50,7 +112,7 @@
 		30993A3A27E87272006CE502 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				30993A3927E87272006CE502 /* CoreMLCameraVideoMatting.app */,
+				30993A3927E87272006CE502 /* CoreMLEmotionalBackgrounds.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -59,10 +121,12 @@
 			isa = PBXGroup;
 			children = (
 				3032777927E9D9EE0015D575 /* CoreMLCameraVideoMatting.entitlements */,
+				305DDE3628A4F6D900162093 /* CoreMLHelpers */,
 				30993A4C27E9149A006CE502 /* Models */,
 				30993A3C27E87272006CE502 /* CoreMLCameraVideoMattingApp.swift */,
 				30993A4A27E87BFA006CE502 /* Helpers.swift */,
 				30993A3E27E87272006CE502 /* ContentView.swift */,
+				3060C0B2289BFAAB0004343E /* EmotionDetector.swift */,
 				30993A4F27E917C8006CE502 /* RVMPredictor.swift */,
 				30993A4027E87274006CE502 /* Assets.xcassets */,
 				30993A4227E87274006CE502 /* Preview Content */,
@@ -81,6 +145,7 @@
 		30993A4C27E9149A006CE502 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				30F73D31289EDE2C00FB9CBE /* Resnet50Emotions.mlmodel */,
 				30993A4D27E9161B006CE502 /* RVM.mlmodel */,
 			);
 			path = Models;
@@ -103,7 +168,7 @@
 			);
 			name = CoreMLCameraVideoMatting;
 			productName = CoreMLCameraVideoMatting;
-			productReference = 30993A3927E87272006CE502 /* CoreMLCameraVideoMatting.app */;
+			productReference = 30993A3927E87272006CE502 /* CoreMLEmotionalBackgrounds.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -157,10 +222,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				30993A4E27E9161B006CE502 /* RVM.mlmodel in Sources */,
+				30F73D4E289EE40600FB9CBE /* CoreML+Combine.swift in Sources */,
 				30993A3F27E87272006CE502 /* ContentView.swift in Sources */,
+				30F73D52289EE40600FB9CBE /* Array+Extensions.swift in Sources */,
+				30F73D53289EE40600FB9CBE /* CVPixelBuffer+Create.swift in Sources */,
+				30F73D48289EE40600FB9CBE /* CGImage+RawBytes.swift in Sources */,
+				30F73D54289EE40600FB9CBE /* UIImage+RawBytes.swift in Sources */,
+				30F73D4C289EE40600FB9CBE /* CGImage+CVPixelBuffer.swift in Sources */,
+				30F73D32289EDE2C00FB9CBE /* Resnet50Emotions.mlmodel in Sources */,
+				30F73D4D289EE40600FB9CBE /* CVPixelBuffer+Rotate.swift in Sources */,
+				30F73D51289EE40600FB9CBE /* MLMultiArray+Helpers.swift in Sources */,
 				30993A4B27E87BFA006CE502 /* Helpers.swift in Sources */,
+				30F73D47289EE40600FB9CBE /* NonMaxSuppression.swift in Sources */,
 				30993A5027E917C8006CE502 /* RVMPredictor.swift in Sources */,
+				3060C0B3289BFAAB0004343E /* EmotionDetector.swift in Sources */,
+				30F73D4F289EE40600FB9CBE /* CVPixelBuffer+Resize.swift in Sources */,
+				30F73D46289EE40600FB9CBE /* CGImagePropertyOrientation.swift in Sources */,
 				30993A3D27E87272006CE502 /* CoreMLCameraVideoMattingApp.swift in Sources */,
+				30F73D4B289EE40600FB9CBE /* Predictions.swift in Sources */,
+				30F73D49289EE40600FB9CBE /* MLModel+Images.swift in Sources */,
+				30F73D4A289EE40600FB9CBE /* UIImage+CVPixelBuffer.swift in Sources */,
+				30F73D44289EE40600FB9CBE /* UIImage+Extensions.swift in Sources */,
+				30F73D45289EE40600FB9CBE /* MLMultiArray+Image.swift in Sources */,
+				30F73D50289EE40600FB9CBE /* Math.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,13 +390,13 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.dvoitekh.dvoitekh.CoreMLCameraVideoMatting;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTS_MACCATALYST = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dvoitekh.dvoitekh.CoreMLEmotionalBackgrounds;
+				PRODUCT_NAME = CoreMLEmotionalBackgrounds;
+				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,6";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -339,13 +423,13 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.dvoitekh.dvoitekh.CoreMLCameraVideoMatting;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTS_MACCATALYST = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dvoitekh.dvoitekh.CoreMLEmotionalBackgrounds;
+				PRODUCT_NAME = CoreMLEmotionalBackgrounds;
+				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,6";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
