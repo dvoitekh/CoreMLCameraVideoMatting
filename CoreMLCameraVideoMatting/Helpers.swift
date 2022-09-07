@@ -42,7 +42,6 @@ extension Image {
 //    Prettify the Image for the UI page
     func normalize() -> some View {
         return self.resizable()
-            .resizable()
             .aspectRatio(contentMode: .fill)
             .frame(width: UIScreen.main.bounds.width,
                    height: UIScreen.main.bounds.height / 2)

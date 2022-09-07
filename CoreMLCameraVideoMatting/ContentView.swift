@@ -16,7 +16,7 @@ struct ContentView: View {
             Image(uiImage: UIImage(named: sharedImage.emotion)!)
                 .resizable()
                 .aspectRatio(contentMode: .fill)
-                .edgesIgnoringSafeArea(.top)
+                .edgesIgnoringSafeArea(.bottom)
                 .overlay(
                     VStack() {
                         if let fgr = sharedImage.fgr, let pha = sharedImage.pha {
@@ -24,7 +24,9 @@ struct ContentView: View {
                                 Image(uiImage: pha).normalize()
                             )
                         }
-                        Text("\(sharedImage.emotion), \(String(format: "%.4f", sharedImage.emotionProbability))").padding()
+                        Text("\(sharedImage.emotion), \(String(format: "%.4f", sharedImage.emotionProbability))")
+                            .background(.white, ignoresSafeAreaEdges: .bottom)
+                            .padding()
                     }
                 )
         }.background(self.color)
